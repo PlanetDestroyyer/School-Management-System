@@ -1,0 +1,46 @@
+{% extends 'home.html' %}
+{% block body %}
+    
+
+<div class="container mt-5">
+    <div class="jumbotron">
+        
+         
+        <div class="addnewstudent">
+            
+            <form action="/home.html" method="post" class="container my-3" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="image" class="form-label">Photos</label>
+                    <input type="file" name="image" class="form-control" >
+                </div>
+                <div class="mb-3">
+                    <label for="pnrnumber" class="form-label">PNR Number</label>
+                    <input type="text" name="pnr_number" class="form-control" placeholder="Enter the PNR No.">
+                </div>
+                <div class="mb-3">
+                    <label for="seat_number" class="form-label">Seat Number</label>
+                    <input type="text" name="seat_number" class="form-control" placeholder="Enter the Seat Number">
+                </div>
+                <div class="mb-3">
+                    <label for="student_name" class="form-label">Name of Student</label>
+                    <input type="text" name="student_name" class="form-control" placeholder="Enter the Name of Student">
+                </div>
+                <div class="mb-3">
+                    <label for="roll_no" class="form-label">Roll No.</label>
+                    <input type="text" name="roll_no" class="form-control" placeholder="Enter the Roll No.">
+                </div>
+                <div class="mb-3">
+                    <label for="email_id" class="form-label">Email</label>
+                    <input type="email" name="email_id" class="form-control" placeholder="Enter the Email Address">
+                </div>
+                <div class="mb-3">
+                    <label for="date_of_birth" class="form-label">Date of Birth</label>
+                    <input type="date" name="date_of_birth" class="form-control" placeholder="DD/MM/YY">
+                </div>
+               <button class="btn btn-primary" type="submit">Add Student</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock body %}

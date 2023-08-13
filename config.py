@@ -1,0 +1,1 @@
+key = "mongodb+srv://Pranav:Pranav369@cluster0.uf8gdp3.mongodb.net/myStudent"

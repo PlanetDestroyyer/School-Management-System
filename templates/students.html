@@ -1,0 +1,31 @@
+{% extends 'home.html' %}
+{% block body %}
+<div class="container-fluid">
+  <div class="row">
+    {% for student in student %}
+    <div class="col-md-4">
+      <div class="card my-3 mx-5" style="width: 18rem;">
+        <!-- <img src="..." class="card-img-top" alt="..."> -->
+        <div class="card-body">
+          <h5 class="card-title">Student Name  : {{ student.student_name }}</h5>
+          <div class="image-container">
+            <img src="data:image/jpeg;base64,{{ student.image_data }}" class="card-img-top" alt="Student Image">
+        </div>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">PNR No.  : {{student.pnr_number}}</li>
+          <li class="list-group-item">Seat No.  : {{ student.seat_number }}</li>
+          <li class="list-group-item">Roll No.  : {{ student.roll_no }}</li>
+          <li class="list-group-item">Email ID: {{ student.email_id }}</li>
+          <li class="list-group-item">D.O.B.  : {{ student.date_of_birth }}</li>
+        </ul>
+        <div class="card-body">
+          <a href="/students/update/{{student.pnr_number}}" class="btn btn-outline-success mx-2" style="text-decoration: none;">Update</a>
+          <a href="/students/delete/{{student.pnr_number}}" class="btn btn-outline-danger mx-2" style="text-decoration: none;">Delete</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock body %}
