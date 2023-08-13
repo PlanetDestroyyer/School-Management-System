@@ -112,4 +112,4 @@ def delete(pnr_number):
     return redirect("/students")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
